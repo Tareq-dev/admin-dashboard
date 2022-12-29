@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Index() {
+function Dashboard() {
   return (
     <div>Index</div>
   )
 }
 
-export default Index
+export default Dashboard
