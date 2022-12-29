@@ -23,9 +23,11 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   return (
     <MenuItem
       active={selected === title}
-      style={{
-        color: colors.grey[100],
-      }}
+      style={
+        theme.palette.mode === "dark"
+          ? { color: colors.grey[500] }
+          : { color: colors.grey[100] }
+      }
       onClick={() => setSelected(title)}
       icon={icon}
     >
@@ -35,6 +37,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   );
 };
 
+
 const Sidebar1 = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -42,25 +45,32 @@ const Sidebar1 = () => {
   const [selected, setSelected] = useState("Dashboard");
   return (
     <Box
-      // // sx={{
-      // //   "& .pro-sidebar-inner": {
-      // //     background: `${colors.primary[400]} !important`,
-      // //   },
-      // //   "& .pro-icon-wrapper": {
-      // //     backgroundColor: "transparent !important",
-      // //   },
-      // //   "& .pro-inner-item": {
-      // //     padding: "5px 35px 5px 20px !important",
-      // //   },
-      // //   "& .pro-inner-item:hover": {
-      // //     color: "#868dfb !important",
-      // //   },
-      // //   "& .pro-menu-item.active": {
-      // //     color: "#6870fa !important",
-      // //   },
-      // }}
+    // // sx={{
+    // //   "& .pro-sidebar-inner": {
+    // //     background: `${colors.primary[400]} !important`,
+    // //   },
+    // //   "& .pro-icon-wrapper": {
+    // //     backgroundColor: "transparent !important",
+    // //   },
+    // //   "& .pro-inner-item": {
+    // //     padding: "5px 35px 5px 20px !important",
+    // //   },
+    // //   "& .pro-inner-item:hover": {
+    // //     color: "#868dfb !important",
+    // //   },
+    // //   "& .pro-menu-item.active": {
+    // //     color: "#6870fa !important",
+    // //   },
+    // }}
     >
-      <Sidebar  backgroundColor={theme.palette.mode === "dark" ? colors.primary[500]:colors.primary[400]} collapsed={isCollapsed}>
+      <Sidebar
+        backgroundColor={
+          theme.palette.mode === "dark"
+            ? colors.primary[500]
+            : colors.primary[400]
+        }
+        collapsed={isCollapsed}
+      >
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
@@ -79,7 +89,7 @@ const Sidebar1 = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  ADMINIS
+                  ADMIN
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
