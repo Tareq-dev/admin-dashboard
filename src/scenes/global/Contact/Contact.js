@@ -7,7 +7,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import React from "react";
 import Header from "../../../components/Header";
-import { mockDataContacts, mockDataTeam } from "../../../data/mockData";
+import { mockDataContacts } from "../../../data/mockData";
 import { tokens } from "../../../theme";
 
 function Contact() {

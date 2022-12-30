@@ -7,6 +7,7 @@ import Dashboard from "./scenes/dashboard/Dashboard";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import Team from "./scenes/Team/Team";
 import Contact from './scenes/global/Contact/Contact';
+import Bar from "./scenes/Bar/Bar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contact />} />
+                <Route path="/bar" element={<Bar />} />
               </Routes>
             </main>
           </div>
