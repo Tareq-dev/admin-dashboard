@@ -4,18 +4,19 @@ import {
   SecurityOutlined,
 } from "@mui/icons-material";
 import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import React from "react";
-import Header from "../../components/Header";
-import { tokens } from "../../theme";
-import { mockDataTeam } from "./../../data/mockData";
+import Header from "../../../components/Header";
+import { mockDataContacts, mockDataTeam } from "../../../data/mockData";
+import { tokens } from "../../../theme";
 
-function Team() {
+function Contact() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: "ID" },
+    { field: "id", headerName: "ID", flex: 0.5 },
+    { field: "registered", headerName: "Register ID" },
     {
       field: "name",
       headerName: "Name",
@@ -37,6 +38,21 @@ function Team() {
     {
       field: "email",
       headerName: "Email",
+      flex: 1,
+    },
+    {
+      field: "address",
+      headerName: "Address",
+      flex: 1,
+    },
+    {
+      field: "city",
+      headerName: "City",
+      flex: 1,
+    },
+    {
+      field: "zipCode",
+      headerName: "ZipCode",
       flex: 1,
     },
     {
@@ -73,7 +89,7 @@ function Team() {
   ];
   return (
     <Box m="20px">
-      <Header title="TEAM" subtitle="Managing the Team Members" />
+      <Header title="CONTACTS" subtitle="List for contact form future" />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -101,12 +117,15 @@ function Team() {
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
           },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]} !important`,
+          },
         }}
       >
-        <DataGrid rows={mockDataTeam} columns={columns} />
+        <DataGrid rows={mockDataContacts} columns={columns} components={{Toolbar:GridToolbar}} />
       </Box>
     </Box>
   );
 }
 
-export default Team;
+export default Contact;
