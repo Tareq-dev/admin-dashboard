@@ -17,7 +17,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { Link } from "react-router-dom";
 
-const Item = ({ title, to, icon, selected, setSelected }) => {
+const Item = ({ title, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
@@ -30,7 +30,6 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       }
       onClick={() => setSelected(title)}
       icon={icon}
-      routerLink={<Link to={to} />}
     >
       <Typography>{title}</Typography>
     </MenuItem>
