@@ -6,10 +6,10 @@ import Sidebar1 from "./scenes/global/SideMenu";
 import Dashboard from "./scenes/dashboard/Dashboard";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import Team from "./scenes/Team/Team";
-import Contact from "./scenes/global/Contact/Contact";
 import Bar from "./scenes/Bar/Bar";
 import Pie from "./scenes/Pie/Pie";
 import Line from "./scenes/Line/Line";
+import Contact from "./scenes/Contact/Contact";
 import Geo from "./scenes/Geo/Geo";
 
 function App() {

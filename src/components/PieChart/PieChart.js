@@ -1,8 +1,8 @@
 import React from "react";
 import { useTheme } from "@mui/material";
-import { tokens } from "../../../theme";
+import { tokens } from "../../theme";
 import { ResponsivePie } from "@nivo/pie";
-import { mockPieData } from "../../../data/mockData";
+import { mockPieData } from "../../data/mockData";
 
 function PieChart() {
   const theme = useTheme();
