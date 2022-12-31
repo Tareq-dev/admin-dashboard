@@ -6,10 +6,11 @@ import Sidebar1 from "./scenes/global/SideMenu";
 import Dashboard from "./scenes/dashboard/Dashboard";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import Team from "./scenes/Team/Team";
-import Contact from './scenes/global/Contact/Contact';
+import Contact from "./scenes/global/Contact/Contact";
 import Bar from "./scenes/Bar/Bar";
-import Pie from './scenes/Pie/Pie';
+import Pie from "./scenes/Pie/Pie";
 import Line from "./scenes/Line/Line";
+import Geo from "./scenes/Geo/Geo";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/line" element={<Line />} />
+                <Route path="/geography" element={<Geo />} />
               </Routes>
             </main>
           </div>
