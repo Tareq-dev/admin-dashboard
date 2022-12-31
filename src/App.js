@@ -8,6 +8,8 @@ import { ProSidebarProvider } from "react-pro-sidebar";
 import Team from "./scenes/Team/Team";
 import Contact from './scenes/global/Contact/Contact';
 import Bar from "./scenes/Bar/Bar";
+import Pie from './scenes/Pie/Pie';
+import Line from "./scenes/Line/Line";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -25,6 +27,8 @@ function App() {
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contact />} />
                 <Route path="/bar" element={<Bar />} />
+                <Route path="/pie" element={<Pie />} />
+                <Route path="/line" element={<Line />} />
               </Routes>
             </main>
           </div>
