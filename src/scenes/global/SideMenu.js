@@ -6,10 +6,6 @@ import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
@@ -25,7 +21,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       active={selected === title}
       style={
         theme.palette.mode === "dark"
-          ? { color: colors.grey[500] }
+          ? { color: "#00000" }
           : { color: colors.grey[100] }
       }
       onClick={() => setSelected(title)}
@@ -44,29 +40,30 @@ const Sidebar1 = () => {
   const [selected, setSelected] = useState("Dashboard");
 
   return (
-    <Box
-    // // sx={{
-    // //   "& .pro-sidebar-inner": {
-    // //     background: `${colors.primary[400]} !important`,
-    // //   },
-    // //   "& .pro-icon-wrapper": {
-    // //     backgroundColor: "transparent !important",
-    // //   },
-    // //   "& .pro-inner-item": {
-    // //     padding: "5px 35px 5px 20px !important",
-    // //   },
-    // //   "& .pro-inner-item:hover": {
-    // //     color: "#868dfb !important",
-    // //   },
-    // //   "& .pro-menu-item.active": {
-    // //     color: "#6870fa !important",
-    // //   },
+    <Box 
+    // sx={{
+    //   "& .pro-sidebar-inner": {
+    //     background: `${colors.blueAccent[800]} !important`,
+    //   },
+    //   "& .pro-icon-wrapper": {
+    //     backgroundColor: "transparent !important",
+    //   },
+    //   "& .pro-inner-item": {
+    //     padding: "5px 35px 5px 20px !important",
+    //   },
+    //   "& .pro-inner-item:hover": {
+    //     color: "#868dfb !important",
+    //   },
+    //   "& .pro-menu-item.active": {
+    //     color: "#6870fa !important",
+    //   },
     // }}
     >
       <Sidebar
+     
         backgroundColor={
           theme.palette.mode === "dark"
-            ? colors.primary[500]
+            ? colors.blueAccent[900]
             : colors.primary[400]
         }
         collapsed={isCollapsed}
@@ -112,20 +109,20 @@ const Sidebar1 = () => {
               <Box textAlign="center">
                 <Typography
                   variant="h2"
-                  color={colors.grey[100]}
+                  color={colors.greenAccent[100]}
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Ed Roh
+                  Tareq
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
+                <Typography variant="h5" color={colors.grey[100]}>
+                  VIP Fancy Admin
                 </Typography>
               </Box>
             </Box>
           )}
 
-          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+          <Box paddingLeft={isCollapsed ? undefined : "10%"}  height="657px">
             <Item
               title="Dashboard"
               to="/"
@@ -136,7 +133,7 @@ const Sidebar1 = () => {
 
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color={colors.grey[100]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Data
@@ -158,7 +155,7 @@ const Sidebar1 = () => {
 
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color={colors.grey[100]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Charts

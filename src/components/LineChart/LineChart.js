@@ -219,10 +219,9 @@ function LineChart({ isDashboard = false, barData }) {
         setGivenData(barData);
       });
   }, []);
-  // console.log(givenData);
   return (
     <ResponsiveLine
-      data={givenData}
+      data={mockLineData}
       theme={{
         axis: {
           domain: {

@@ -1,13 +1,11 @@
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
-import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../components/Header";
-import { DownloadOutlined } from "@mui/icons-material";
 import LineChart from "../../components/LineChart/LineChart";
 import ProgressCircleBox from "../../components/ProgressCircleBox/ProgressCircleBox";
 import GeoChart from "../../components/GeoChart/GeoChart";
@@ -47,7 +45,7 @@ const Dashboard = () => {
             increase="+14%"
             icon={
               <EmailIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                sx={{ color: colors.greenAccent[100], fontSize: "26px" }}
               />
             }
           />
@@ -66,7 +64,7 @@ const Dashboard = () => {
             increase="+21%"
             icon={
               <PointOfSaleIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                sx={{ color: colors.greenAccent[100], fontSize: "26px" }}
               />
             }
           />
@@ -85,7 +83,7 @@ const Dashboard = () => {
             increase="+5%"
             icon={
               <PersonAddIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                sx={{ color: colors.greenAccent[100], fontSize: "26px" }}
               />
             }
           />
@@ -104,7 +102,7 @@ const Dashboard = () => {
             increase="+43%"
             icon={
               <TrafficIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                sx={{ color: colors.greenAccent[100], fontSize: "26px" }}
               />
             }
           />
@@ -134,7 +132,7 @@ const Dashboard = () => {
               <Typography
                 variant="h3"
                 fontWeight="bold"
-                color={colors.greenAccent[500]}
+                color={colors.greenAccent[100]}
               >
                 $59,342.32
               </Typography>
@@ -174,7 +172,7 @@ const Dashboard = () => {
             >
               <Box>
                 <Typography
-                  color={colors.greenAccent[500]}
+                  color={colors.greenAccent[100]}
                   variant="h5"
                   fontWeight="600"
                 >
@@ -186,7 +184,7 @@ const Dashboard = () => {
               </Box>
               <Box color={colors.grey[100]}>{transaction.date}</Box>
               <Box
-                backgroundColor={colors.greenAccent[500]}
+                backgroundColor={colors.greenAccent[100]}
                 p="5px 10px"
                 borderRadius="4px"
               >

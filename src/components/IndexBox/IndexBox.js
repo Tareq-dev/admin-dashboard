@@ -14,7 +14,7 @@ const IndexBox = ({ title, subtitle, icon, progress, increase }) => {
           <Typography
             variant="h4"
             fontWeight="bold"
-            sx={{ color: colors.grey[100] }}
+            sx={{ color: colors.greenAccent[100] }}
           >
             {title}
           </Typography>
@@ -24,13 +24,13 @@ const IndexBox = ({ title, subtitle, icon, progress, increase }) => {
         </Box>
       </Box>
       <Box display="flex" justifyContent="space-between" mt="2px">
-        <Typography variant="h5" sx={{ color: colors.greenAccent[500] }}>
+        <Typography variant="h5" sx={{ color: colors.greenAccent[100] }}>
           {subtitle}
         </Typography>
         <Typography
           variant="h5"
           fontStyle="italic"
-          sx={{ color: colors.greenAccent[600] }}
+          sx={{ color: colors.greenAccent[100] }}
         >
           {increase}
         </Typography>
