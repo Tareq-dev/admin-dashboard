@@ -85,10 +85,10 @@ const Sidebar1 = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.grey[100]}>
+                <Typography variant="h3" color={colors.grey[900]}>
                   ADMIN
                 </Typography>
-                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
+                <IconButton onClick={() => setIsCollapsed(!isCollapsed)} >
                   <MenuOutlinedIcon />
                 </IconButton>
               </Box>
@@ -109,20 +109,20 @@ const Sidebar1 = () => {
               <Box textAlign="center">
                 <Typography
                   variant="h2"
-                  color={colors.greenAccent[100]}
+                  color="#00000"
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
                   Tareq
                 </Typography>
-                <Typography variant="h5" color={colors.grey[100]}>
+                <Typography variant="h5" color="#00000">
                   VIP Fancy Admin
                 </Typography>
               </Box>
             </Box>
           )}
 
-          <Box paddingLeft={isCollapsed ? undefined : "10%"}  height="657px">
+          <Box paddingLeft={isCollapsed ? undefined : "10%"}  height="670px">
             <Item
               title="Dashboard"
               to="/"
@@ -133,7 +133,7 @@ const Sidebar1 = () => {
 
             <Typography
               variant="h6"
-              color={colors.grey[100]}
+              color={colors.grey[900]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Data
@@ -155,7 +155,7 @@ const Sidebar1 = () => {
 
             <Typography
               variant="h6"
-              color={colors.grey[100]}
+              color={colors.grey[900]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Charts
