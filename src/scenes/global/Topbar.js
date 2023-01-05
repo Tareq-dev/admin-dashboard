@@ -18,6 +18,7 @@ function Topbar() {
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
       <Box
+      className="mobile-search-bar"
         display="flex"
         backgroundColor={colors.primary[400]}
         borderRadius="3px"
@@ -34,9 +35,6 @@ function Topbar() {
           ) : (
             <LightModeOutlined />
           )}
-        </IconButton>
-        <IconButton type="button" sx={{ p: 1 }}>
-          <Search />
         </IconButton>
         <IconButton>
           <NotificationAddOutlined />

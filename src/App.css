@@ -1,8 +1,10 @@
 @media only screen and (max-width: 500px) {
-    /* /* .mobile-grid{
-        display: grid;
-    } */
+     .mobile-search-bar{
+        height: 35px;
+        width: 162px;
+    } 
     .mobile-grid-box{
         grid-column: span 12!important;
     } 
+  
   }

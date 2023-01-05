@@ -201,6 +201,7 @@ const Dashboard = () => {
 
         {/* ROW 3 */}
         <Box
+        className="mobile-grid-box"
           gridColumn="span 4"
           gridRow="span 2"
           color={colors.grey[100]}
@@ -228,6 +229,7 @@ const Dashboard = () => {
           </Box>
         </Box>
         <Box
+        className="mobile-grid-box"
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
@@ -245,6 +247,7 @@ const Dashboard = () => {
           </Box>
         </Box>
         <Box
+        className="mobile-grid-box"
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
