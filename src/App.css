@@ -1,7 +1,7 @@
 @media only screen and (max-width: 500px) {
      .mobile-search-bar{
         height: 35px;
-        width: 162px;
+        width: 130px;
     } 
     .mobile-grid-box{
         grid-column: span 12!important;

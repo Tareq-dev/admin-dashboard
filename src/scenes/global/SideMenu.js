@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 // import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
@@ -40,7 +40,8 @@ const Sidebar1 = () => {
   const [selected, setSelected] = useState("Dashboard");
 
   return (
-    <Box 
+    <Box
+    style={{ display: 'flex', height: '100%', minHeight: '400px' }}
     // sx={{
     //   "& .pro-sidebar-inner": {
     //     background: `${colors.blueAccent[800]} !important`,
@@ -60,7 +61,7 @@ const Sidebar1 = () => {
     // }}
     >
       <Sidebar
-     
+        breakPoint="always"
         backgroundColor={
           theme.palette.mode === "dark"
             ? colors.blueAccent[900]
@@ -75,7 +76,7 @@ const Sidebar1 = () => {
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
               margin: "10px 0 20px 0",
-              color: colors.grey[100],
+              color: colors.grey[900],
             }}
           >
             {!isCollapsed && (
@@ -88,7 +89,9 @@ const Sidebar1 = () => {
                 <Typography variant="h3" color={colors.grey[900]}>
                   ADMIN
                 </Typography>
-                <IconButton onClick={() => setIsCollapsed(!isCollapsed)} >
+                <IconButton style={{
+              color: colors.grey[900],
+            }} onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
                 </IconButton>
               </Box>
@@ -122,7 +125,7 @@ const Sidebar1 = () => {
             </Box>
           )}
 
-          <Box paddingLeft={isCollapsed ? undefined : "10%"}  height="670px">
+          <Box paddingLeft={isCollapsed ? undefined : "10%"} height="670px">
             <Item
               title="Dashboard"
               to="/"
@@ -191,6 +194,7 @@ const Sidebar1 = () => {
           </Box>
         </Menu>
       </Sidebar>
+      
     </Box>
   );
 };

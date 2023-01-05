@@ -15,13 +15,14 @@ import Geo from "./scenes/Geo/Geo";
 
 function App() {
   const [theme, colorMode] = useMode();
+
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ProSidebarProvider>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <div className="app">
-            {/* <Sidebar1 /> */}
+            <Sidebar1 />
             <main className="content">
               <Topbar />
               <Routes>
