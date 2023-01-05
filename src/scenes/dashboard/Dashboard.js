@@ -24,7 +24,7 @@ const Dashboard = () => {
       </Box>
 
       {/* GRID & CHARTS */}
-      <Box
+      <Box 
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows="140px"
@@ -32,6 +32,7 @@ const Dashboard = () => {
       >
         {/* ROW 1 */}
         <Box
+         className="mobile-grid-box"
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
@@ -51,6 +52,7 @@ const Dashboard = () => {
           />
         </Box>
         <Box
+        className="mobile-grid-box"
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
@@ -70,6 +72,7 @@ const Dashboard = () => {
           />
         </Box>
         <Box
+        className="mobile-grid-box"
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
@@ -89,6 +92,7 @@ const Dashboard = () => {
           />
         </Box>
         <Box
+        className="mobile-grid-box"
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
@@ -110,6 +114,7 @@ const Dashboard = () => {
 
         {/* ROW 2 */}
         <Box
+         className="mobile-grid-box"
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
@@ -137,13 +142,13 @@ const Dashboard = () => {
                 $59,342.32
               </Typography>
             </Box>
-           
           </Box>
           <Box height="250px" m="-20px 0 0 0">
             <LineChart isDashboard={true} />
           </Box>
         </Box>
         <Box
+          className="mobile-grid-box"
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}

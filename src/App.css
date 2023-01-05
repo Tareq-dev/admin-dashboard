@@ -1,0 +1,8 @@
+@media only screen and (max-width: 500px) {
+    /* /* .mobile-grid{
+        display: grid;
+    } */
+    .mobile-grid-box{
+        grid-column: span 12!important;
+    } 
+  }

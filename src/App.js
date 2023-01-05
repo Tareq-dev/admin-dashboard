@@ -1,3 +1,4 @@
+import './App.css';
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import Topbar from "./scenes/global/Topbar";
@@ -20,7 +21,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <div className="app">
-            <Sidebar1 />
+            {/* <Sidebar1 /> */}
             <main className="content">
               <Topbar />
               <Routes>
